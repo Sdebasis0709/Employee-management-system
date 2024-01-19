@@ -1,0 +1,33 @@
+<!-- employees/templates/employees/delete_employee.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Employee</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'employees/css/styles.css' %}"
+    />
+</head>
+<body>
+
+<h1>Delete Employee</h1>
+<br><br>
+
+<p style="color: red; font-size: 20px; ">Are you sure you want to delete {{ employee.name }}?</p>
+<br>
+<form method="post">
+    {% csrf_token %}
+
+    <button type="submit" style="color:white; background-color:red;">Confirm Delete</button>
+</form>
+
+<br>
+
+<a href="{% url 'index' %}" ><button>Cancel</button></a>
+
+</body>
+</html>
