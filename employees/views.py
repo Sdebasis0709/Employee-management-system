@@ -40,3 +40,8 @@ def delete_employee(request, employee_id):
         return redirect('index')
 
     return render(request, 'employees/delete_employee.html', {'employee': employee})
+
+
+
+
+print("cdhjlkxjbsaxc b")
